@@ -18,13 +18,48 @@ public class Dog {
 	daisy.breed = "Pug";
 	System.out.println(taz.breed);
 	
-	
-	
-	
+ System.out.println(taz.breed.substring(1, 4));
+  
+	int num1;
+	int num2;
+  int num3;
+  double num4;
+  double num5;
+  double num6;
+  
+  num2 = 5;
+  num3 = 7;
+  num5 = 16.2;
+  num6 = 8.1;
+  num1 = num2 + num3;
+  System.out.println("num2 plus num3 is " + num1);
+  num4 = num5 / num6;
+  System.out.println(num4);
+  System.out.println(num2 % num3);
+  System.out.println(num3 - num2);
+  Scanner scan = new Scanner(System.in);
+  System.out.println("what is your favorite dog breed?");
+  String doggy = scan.nextLine();
+  System.out.println("The best dog according to you is " + doggy);
+  scan.close();
+ 
+
+ Rectangle newRectangle = new Rectangle();
+newRectangle.setWidth(5);
+newRectangle.setHeight(7);
+newRectangle.calcArea();
+
+
+
+    
+  
+ 
+  
+  
+  }
 	}	
 	
-}
-	
+
 
 	
 
