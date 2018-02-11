@@ -6,6 +6,7 @@ public class Rectangle {
   public int getWidth() {
   return width;
   }
+  //method name and parameters
   public void setWidth(int wid) {
     width = wid;
   

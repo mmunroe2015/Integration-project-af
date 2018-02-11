@@ -17,8 +17,14 @@ public class Dog {
 	taz.breed = "Dauschund";
 	daisy.breed = "Pug";
 	System.out.println(taz.breed);
+  //casting
+	Object o = "str";
+	String str = (String)o;
+	System.out.println(o + "ing");
 	
  System.out.println(taz.breed.substring(1, 4));
+ System.out.println("Let's shout taz's breed. " + taz.breed.toUpperCase());
+ System.out.println("AND NOW WE WILL " + "WHISPER".toLowerCase());
   
 	int num1;
 	int num2;
@@ -34,9 +40,10 @@ public class Dog {
   num1 = num2 + num3;
   System.out.println("num2 plus num3 is " + num1);
   num4 = num5 / num6;
-  System.out.println(num4);
+  System.out.println("num5 divided by num6 is " + num4);
   System.out.println(num2 % num3);
   System.out.println(num3 - num2);
+  System.out.println(num1 * num4);
   Scanner scan = new Scanner(System.in);
   System.out.println("what is your favorite dog breed?");
   String doggy = scan.nextLine();
@@ -44,7 +51,8 @@ public class Dog {
   scan.close();
  
 
- Rectangle newRectangle = new Rectangle();
+ //method call and argument
+  Rectangle newRectangle = new Rectangle();
 newRectangle.setWidth(5);
 newRectangle.setHeight(7);
 newRectangle.calcArea();
