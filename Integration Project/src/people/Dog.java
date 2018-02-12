@@ -55,7 +55,8 @@ public class Dog {
   Rectangle newRectangle = new Rectangle();
 newRectangle.setWidth(5);
 newRectangle.setHeight(7);
-newRectangle.calcArea();
+//calling area method and displays area
+System.out.println(newRectangle.calcArea());
 
 
 
