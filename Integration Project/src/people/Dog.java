@@ -45,9 +45,9 @@ public class Dog {
     System.out.println(num3 - num2);
     System.out.println(num1 * num4);
     Scanner scan = new Scanner(System.in);
-    System.out.println("what is your favorite dog breed?");
-    String doggy = scan.nextLine();
-    System.out.println("The best dog according to you is " + doggy);
+   // System.out.println("what is your favorite dog breed?");
+   // String doggy = scan.nextLine();
+    //System.out.println("The best dog according to you is " + doggy);
     scan.close();
 
     // method call and argument
@@ -58,9 +58,18 @@ public class Dog {
     System.out.println(newRectangle.calcArea());
     boolean loop = 4 < 5;
     System.out.println(loop);
-    
+    int i = 1;
+    for(i = 1; i <= 3; i++) {
+      System.out.println("You are idiot number " + i);
+    }
+    int dogs = 1;
+    while (dogs < 6) {
+      System.out.println("The number of dogs in my house is " + dogs);
+      dogs++;
+    }
   }
 }
+ 
 
 /*
  * Definition of a variable: a space in memory for something to be used later
