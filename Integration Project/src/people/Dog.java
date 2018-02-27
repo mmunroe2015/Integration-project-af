@@ -45,9 +45,9 @@ public class Dog {
     System.out.println(num3 - num2);
     System.out.println(num1 * num4);
     Scanner scan = new Scanner(System.in);
-   // System.out.println("what is your favorite dog breed?");
-   // String doggy = scan.nextLine();
-    //System.out.println("The best dog according to you is " + doggy);
+   /* System.out.println("what is your favorite dog breed?");
+    String doggy = scan.nextLine();
+    System.out.println("The best dog according to you is " + doggy); */
     scan.close();
 
     // method call and argument
@@ -67,6 +67,10 @@ public class Dog {
       System.out.println("The number of dogs in my house is " + dogs);
       dogs++;
     }
+    Circle myCircle = new Circle(); 
+      myCircle.setRadius(5);
+      System.out.println(myCircle.calculateArea());
+    
   }
 }
  
