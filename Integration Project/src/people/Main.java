@@ -1,10 +1,11 @@
 //Mikayla Munroe main dog class file
 package people;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
-    // main method
+  // main method
 
   public static void main(String[] args) {
 
@@ -43,9 +44,11 @@ public class Main {
     System.out.println(num3 - num2);
     System.out.println(num1 * num4);
     Scanner scan = new Scanner(System.in);
-   /* System.out.println("what is your favorite dog breed?");
-    String doggy = scan.nextLine();
-    System.out.println("The best dog according to you is " + doggy); */
+    /*
+     * System.out.println("what is your favorite dog breed?"); String doggy =
+     * scan.nextLine(); System.out.println("The best dog according to you is " +
+     * doggy);
+     */
     scan.close();
 
     // method call and argument
@@ -56,22 +59,46 @@ public class Main {
     System.out.println(newRectangle.calcArea());
     boolean loop = 4 < 5;
     System.out.println(loop);
-    int i = 1;
-    for(i = 1; i <= 3; i++) {
-      System.out.println("You are genius number " + i);
+    int bla = 1;
+    for (bla = 1; bla<4; bla++) {
+      System.out.println("i love u for " + bla + " years");
+      
     }
     int dogs = 1;
     while (dogs < 6) {
       System.out.println("The number of dogs in my house is " + dogs);
       dogs++;
     }
-    Circle myCircle = new Circle(); 
-      myCircle.setRadius(5);
-      System.out.println(myCircle.calculateArea());
-    
-  }
-}
+    Circle myCircle = new Circle();
+    myCircle.setRadius(5);
+    System.out.println(myCircle.calculateArea());
+    myCircle.setX(4);
+    myCircle.setY(8);
+    System.out.println("The center is " + "(" + myCircle.getX() + ", "
+        + myCircle.getY() + ")");
  
+  
+    int zoo[] = { 3, 5, 23, 7, 9, 55 };
+    int sum = 0;  
+    for (int i = 1;i<zoo.length;i++)
+    {
+      sum += zoo[i];
+    }
+  System.out.println("The sum is " + sum);
+ //passes smallest integer in array
+  System.out.println(findSmallest(zoo));
+  System.out.println(Arrays.asList(zoo).indexOf(7));
+  }//end main method
+ public static int findSmallest(int zoo[]) {
+   int smallest= zoo[0];
+   for(int i = 1; i < zoo.length; i++) {
+     if (zoo[i]< smallest)
+       smallest = zoo[i];
+   }
+   return smallest;
+ }
+}
+
 
 /*
  * Definition of a variable: a space in memory for something to be used later
