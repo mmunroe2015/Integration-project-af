@@ -3,10 +3,11 @@ package people;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class Main {
   // main method
-
+//static means that an variable can be accessed without an instance created
   public static void main(String[] args) {
 
     Dog taz = new Dog();
@@ -88,8 +89,35 @@ public class Main {
  //passes smallest integer in array
   System.out.println(findSmallest(zoo));
   System.out.println(Arrays.asList(zoo).indexOf(7));
+ //find index
+
+  //For each loop
+  for(int i: zoo) {
+    System.out.println(i);
+  }
+  //looking for index of 3 in the array
+  System.out.println("The target is " + findIndex(zoo, 3));
+  
+ String sentence = "What's up my dude";
+ StringBuilder sup = new StringBuilder(sentence);
+ sup.reverse();
+ System.out.println(sup);
+ sup.append(" What's up my dude");
+ System.out.println(sup);
+ sup.delete(3, 6);
+ System.out.println(sup);
   }//end main method
- public static int findSmallest(int zoo[]) {
+
+  public static int findIndex(int[] a, int target)
+  {
+   int i = 0;
+    while(a[i]!= target) {
+      i++;
+    }
+    return i;
+  }
+  
+  public static int findSmallest(int zoo[]) {
    int smallest= zoo[0];
    for(int i = 1; i < zoo.length; i++) {
      if (zoo[i]< smallest)
@@ -97,6 +125,7 @@ public class Main {
    }
    return smallest;
  }
+ 
 }
 
 
