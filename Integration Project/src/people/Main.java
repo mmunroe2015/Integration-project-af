@@ -1,13 +1,15 @@
 //Mikayla Munroe main dog class file
 package people;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 public class Main {
   // main method
-//static means that an variable can be accessed without an instance created
+  // static means that an variable can be accessed without an instance created
   public static void main(String[] args) {
 
     Dog taz = new Dog();
@@ -22,9 +24,17 @@ public class Main {
     String str = (String) o;
     System.out.println(o + "ing");
 
+    //display local date and time
     System.out.println(taz.breed.substring(1, 4));
     System.out.println("Let's shout taz's breed. " + taz.breed.toUpperCase());
     System.out.println("AND NOW WE WILL " + "WHISPER".toLowerCase());
+
+    LocalDateTime now = LocalDateTime.now();
+    System.out.println("Before : " + now);
+    DateTimeFormatter formatter = DateTimeFormatter
+        .ofPattern("yyyy-MM-dd HH:mm:ss");
+    String formatDateTime = now.format(formatter);
+    System.out.println("After : " + formatDateTime);
 
     int num1;
     int num2;
@@ -50,6 +60,18 @@ public class Main {
      * scan.nextLine(); System.out.println("The best dog according to you is " +
      * doggy);
      */
+    int x1 = 0;
+    boolean gottenGoodInput = false;
+    while (gottenGoodInput == false) {
+      System.out.println("Enter first number");
+      try {
+        x1 = scan.nextInt();
+        gottenGoodInput = true;
+      } catch (InputMismatchException ex) {
+        System.out.println("Requires an integer");
+        scan.nextLine();
+      }
+    }
     scan.close();
 
     // method call and argument
@@ -61,9 +83,9 @@ public class Main {
     boolean loop = 4 < 5;
     System.out.println(loop);
     int bla = 1;
-    for (bla = 1; bla<4; bla++) {
+    for (bla = 1; bla < 4; bla++) {
       System.out.println("i love u for " + bla + " years");
-      
+
     }
     int dogs = 1;
     while (dogs < 6) {
@@ -77,57 +99,53 @@ public class Main {
     myCircle.setY(8);
     System.out.println("The center is " + "(" + myCircle.getX() + ", "
         + myCircle.getY() + ")");
- 
-  
+
     int zoo[] = { 3, 5, 23, 7, 9, 55 };
-    int sum = 0;  
-    for (int i = 1;i<zoo.length;i++)
-    {
+    int sum = 0;
+    for (int i = 1; i < zoo.length; i++) {
       sum += zoo[i];
     }
-  System.out.println("The sum is " + sum);
- //passes smallest integer in array
-  System.out.println(findSmallest(zoo));
-  System.out.println(Arrays.asList(zoo).indexOf(7));
- //find index
+    System.out.println("The sum is " + sum);
+    // passes smallest integer in array
+    System.out.println(findSmallest(zoo));
+    System.out.println(Arrays.asList(zoo).indexOf(7));
+    // find index
 
-  //For each loop
-  for(int i: zoo) {
-    System.out.println(i);
-  }
-  //looking for index of 3 in the array
-  System.out.println("The target is " + findIndex(zoo, 3));
-  
- String sentence = "What's up my dude";
- StringBuilder sup = new StringBuilder(sentence);
- sup.reverse();
- System.out.println(sup);
- sup.append(" What's up my dude");
- System.out.println(sup);
- sup.delete(3, 6);
- System.out.println(sup);
-  }//end main method
+    // For each loop
+    for (int i : zoo) {
+      System.out.println(i);
+    }
+    // looking for index of 3 in the array
+    System.out.println("The target is " + findIndex(zoo, 3));
 
-  public static int findIndex(int[] a, int target)
-  {
-   int i = 0;
-    while(a[i]!= target) {
+    String sentence = "What's up my dude";
+    StringBuilder sup = new StringBuilder(sentence);
+    sup.reverse();
+    System.out.println(sup);
+    sup.append(" What's up my dude");
+    System.out.println(sup);
+    sup.delete(3, 6);
+    System.out.println(sup);
+  }// end main method
+
+  public static int findIndex(int[] a, int target) {
+    int i = 0;
+    while (a[i] != target) {
       i++;
     }
     return i;
   }
-  
-  public static int findSmallest(int zoo[]) {
-   int smallest= zoo[0];
-   for(int i = 1; i < zoo.length; i++) {
-     if (zoo[i]< smallest)
-       smallest = zoo[i];
-   }
-   return smallest;
- }
- 
-}
 
+  public static int findSmallest(int zoo[]) {
+    int smallest = zoo[0];
+    for (int i = 1; i < zoo.length; i++) {
+      if (zoo[i] < smallest)
+        smallest = zoo[i];
+    }
+    return smallest;
+  }
+
+}
 
 /*
  * Definition of a variable: a space in memory for something to be used later
